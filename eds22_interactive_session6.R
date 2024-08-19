@@ -59,5 +59,16 @@ co2_total <- wb_data_tidy |>
    group_by(country) |>
    summarize(total_co2_kt = sum(co2_emissions_kit, na.rm = TRUE))
 
+us_ca_data <- wb_data_tidy |>
+  filter(country %in% c("United States", "Canada"))
 
+data_2020 <- wb_data_tidy |>
+  filter(year == 2020)
 
+co2_annual <- wb_data_tidy |>
+  group_by(year) |>
+  summarize(annual_total_co2_kt = sum(co2_emissions_kit, na.rm = TRUE))
+
+ggplot(data = co2_annual, aes(x = year, y = annual_total_co2_kt, color = annual_total_co2_kt)) +
+  geom_line(size = 2) +
+  labs(title = "Global total of Annual CO2 by Year")
