@@ -17,6 +17,6 @@ wb_tidy <- wb_indicators |>
                                   access_elec = 'Access to electricity (% of population)',
                                   co2 = 'CO2 emissions (kt)',
                                   fossil_fuels = 'Fossil fuel energy consumption (% of total)',
-                                  water_stress = 'Level of water stress: freshwater withdrawal as a proportion of available freshwater'
+                                  water_stress = 'Level of water stress: freshwater withdrawal as a proportion of available freshwater resources'
                                   )
 
